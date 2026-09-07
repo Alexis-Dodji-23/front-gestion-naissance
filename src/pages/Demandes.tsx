@@ -1,4 +1,4 @@
-import { DEMANDES, formatDate, getColorStatut, getLabelStatut } from "../utils"
+import { DEMANDES, formatDate, getColorStatut, getLabelStatut } from "@/utils"
 
 function Demandes() {
   return (

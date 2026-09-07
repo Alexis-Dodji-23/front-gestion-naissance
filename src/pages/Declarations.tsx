@@ -1,4 +1,4 @@
-import { DECLARATIONS, formatDate, getColorStatut, getLabelStatut } from "../utils";
+import { DECLARATIONS, formatDate, getColorStatut, getLabelStatut } from "@/utils";
 
 function Declarations() {
   return (

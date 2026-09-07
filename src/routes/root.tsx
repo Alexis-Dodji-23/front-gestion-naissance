@@ -1,9 +1,9 @@
 import { createBrowserRouter } from "react-router";
-import App from "../App";
-import Home from "../pages/Home";
-import PrivateLayout from "../layout/PrivateLayout";
-import Declarations from "../pages/Declarations";
-import Demandes from "../pages/Demandes";
+import App from "@/App";
+import Home from "@/pages/Home";
+import PrivateLayout from "@/layout/PrivateLayout";
+import Declarations from "@/pages/Declarations";
+import Demandes from "@/pages/Demandes";
 
 const root = createBrowserRouter([
   {

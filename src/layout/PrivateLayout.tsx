@@ -1,5 +1,5 @@
 import { Outlet } from "react-router"
-import NavBar from "../components/navigation/NavBar"
+import NavBar from "@/components/navigation/NavBar"
 
 function PrivateLayout() {
   return (

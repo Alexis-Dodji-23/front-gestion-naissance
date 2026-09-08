@@ -1,0 +1,14 @@
+import type { Company } from "./Company"
+import type { Profile } from "./Profile"
+
+export type Declarations = {
+    id: string | number,
+    picture: string
+    comment: string,
+    status: string,
+    registered: string,
+    child: Profile,
+    firsParent: Profile,
+    secondParent:Profile,
+    company: Company,
+}

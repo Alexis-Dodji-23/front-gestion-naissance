@@ -1,6 +1,21 @@
-import { DECLARATIONS, formatDate, getColorStatut, getLabelStatut } from "@/utils";
+import type { Declarations } from "@/types/Declarations";
+import { formatDate, getColorStatut, getLabelStatut } from "@/utils";
+import { useEffect, useState } from "react";
 
 function Declarations() {
+    
+    const[declarations, setDeclarations] = useState<Declarations[]>([]);
+
+    const search = async () => {
+        const response = await fetch("http://localhost:8080/declarations")
+        const data = await response.json()
+        setDeclarations(data);
+    }
+
+    useEffect(()=> {
+        search();
+    },[]);
+
   return (
     <section className="ml-60 mr-4">
         <article className="grid grid-cols-8 mb-1">
@@ -14,7 +29,7 @@ function Declarations() {
             <span className="text-center">Action</span>
         </article>
 
-      {DECLARATIONS.map((declaration, index) => (
+      {declarations.map((declaration: Declarations, index) => (
         <article 
             key={declaration.id} 
             className={`grid grid-cols-8 ${index % 2 == 0 ? "bg-gray-100" : null}`}
@@ -26,7 +41,7 @@ function Declarations() {
                 <span>{declaration.child.lastsName}</span>
             </span>
 
-            <span className="border-gray-200 border-t-2 py-1 flex justify-center items-center">{formatDate(declaration.child.birthDate)}</span>
+            <span className="border-gray-200 border-t-2 py-1 flex justify-center items-center">{declaration?.child?.birthDate ? formatDate(declaration.child.birthDate) : null}</span>
 
             <span className="border-gray-200 border-t-2 py-1 flex justify-center items-center">{declaration.company.name}</span>
 

@@ -8,11 +8,11 @@ const NAV_LINKS = [
         label: "Les demandes",
     },
     {
-        to: "",
+        to: "/private/",
         label: "Les utilisateurs",
     },
     {
-        to: "",
+        to: "/private/",
         label: "Les courriers",
     }
 ]

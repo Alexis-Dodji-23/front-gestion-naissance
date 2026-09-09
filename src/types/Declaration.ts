@@ -1,7 +1,7 @@
 import type { Company } from "./Company"
 import type { Profile } from "./Profile"
 
-export type Declarations = {
+export type Declaration = {
     id: string | number,
     picture: string
     comment: string,
